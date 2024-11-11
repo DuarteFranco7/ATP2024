@@ -1,4 +1,4 @@
-# RESUMO DO TPC3
+# README.MD Resumo de TP3
 ## DATA: 30/09/2024
 ## AUTOR: Duarte Franco
 

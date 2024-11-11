@@ -1,4 +1,4 @@
-# README.MD Resumo TP2
+# README.MD Resumo TP6
 ## Data:20/10/2024
 ## Autor: Duarte Filipe Parente Franco
 ## Resumo

@@ -1,4 +1,4 @@
-# RESUMO DO TPC4
+# README.MD Resumo de TP4
 ## DATA: 7/09/2024
 ## AUTOR: Duarte Franco
 
