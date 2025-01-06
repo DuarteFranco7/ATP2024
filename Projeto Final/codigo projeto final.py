@@ -730,11 +730,11 @@ class SistemaPubs:
                 loop = True
                 while loop:
                     event_res, _ = window_results.read()
-                    if event_res in (sg.WIN_CLOSED, 'Fechar'):
+                    if event_res is None or event_res in (sg.WIN_CLOSED, 'Fechar'):
                         window_results.close()
                         loop = False
                         
-                    if event_res.startswith('DEL_'):
+                    elif event_res.startswith('DEL_'):
                         title = event_res[4:]
                         if sg.popup_yes_no('Tem certeza que deseja eliminar esta publicação?') == 'Yes':
                             if self.eliminar_publicacao(title):
@@ -1320,6 +1320,9 @@ def Visual():
                     # Realiza a pesquisa
                     resultados = sistema.pesquisar_publicacoes(valores_pesq['criterio'], valores_pesq['valor'])
 
+                    if not resultados:
+                        sg.popup('Artigo não encontrado!')
+    
                     if resultados:
                         # Exibe os resultados
                         layout_resultados = [
